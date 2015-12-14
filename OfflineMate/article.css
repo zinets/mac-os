@@ -1,0 +1,314 @@
+html, body {
+    height: 100%;
+}
+
+.reeder-page {
+    min-height: 100%;
+    position: relative;
+        
+}
+
+body {
+	/*margin: 40px 0 50px 0;*/
+    margin: 0;
+}
+
+body[data-scale='2'] {
+    background-size: 128px 128px;
+}
+body[data-scale='1'] {
+    background-size: 256px 256px;
+}
+
+* {
+	color: inherit;	
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	text-decoration: none;
+    color: inherit;
+}
+
+sup, sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;	
+}
+sup { bottom: 0.5ex; }
+sub { top: 0.5ex; }
+
+
+.reeder-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 0 50px 0;
+    /*margin: 40px 0 50px 0;*/
+
+}
+
+/* HEADING */
+
+.reeder-heading {
+	display: block;
+	padding: 15px 0 14px;
+	margin: 20px 0;
+	border-bottom: 1px solid rgba(0,0,0,0.1);	
+    
+}
+
+.reeder-heading:hover {
+	
+	padding: 14px;
+	margin-left: -15px;
+	margin-right: -15px;
+	
+	-webkit-border-radius: 3px;
+	
+	/*
+     -webkit-box-shadow: rgba(0,0,0,0.5) 0px 0px 2px;
+     border: 1px solid rgba(255,255,255,1.0);
+     
+     background: -webkit-gradient(linear, left top, left bottom, from(#FAFAF6), to(#f7f7f3));
+     */
+	
+	
+	border: 1px solid rgba(0,0,0,0.15);
+	
+	/*background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.3)), to(rgba(245,245,245,0.2)));*/
+    /*background: rgba(255,255,255,0.2);*/
+	/*-webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 1px,rgba(255,255,255,1.0) 0px 1px 0px inset;*/
+    background: rgba(0,0,0,0.01);
+	-webkit-box-shadow: rgba(255,255,255,1.0) 0px 1px 0px,rgba(255,255,255,0.25) 0px 1px 2px inset;
+ 
+}
+
+.reeder-heading:active {
+    border: 1px solid rgba(0,0,0,0.25);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.050)), to(rgba(0,0,0,0.025)));
+	-webkit-box-shadow: rgba(255,255,255,1.0) 0px 1px 1px,rgba(0,0,0,0.2) 0px 0px 3px inset;
+    
+}
+
+.reeder-heading:hover span {
+	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+    
+}
+
+.reeder-heading:active span {
+	text-shadow: rgba(255,255,255,1.0) 0px 1px 0px;
+    
+}
+
+
+.reeder-heading span {
+	display: block;
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+.reeder-heading .title {
+	opacity: 1;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.reeder-content {
+	margin-top: 30px;
+	line-height: 2;
+}
+
+
+.reeder-content * {
+    word-wrap: break-word;
+}
+
+.reeder-content a:not([class*=reeder-img]) {
+    
+	position: relative;
+	
+	font-weight: bold;
+    
+    
+	/*-webkit-box-shadow: rgba(0,0,0,0) 0px 0px 2px;*/
+    
+	border: 1px solid rgba(0,0,0,0.0);
+	border-bottom: 1px dashed rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.0);
+    
+	padding: 0;
+	margin: 0 -1px 0 -1px;
+	
+	position: relative;
+}
+
+.reeder-content a:not([class*=reeder-img]):hover {
+    
+	z-index: 1;
+	
+    
+	color: rgba(250,250,250,1.0) !important;
+	
+    
+    -webkit-border-radius: 4px;
+    margin: 0 -4px 0 -4px;
+    padding: 1px 3px;
+    border: 1px solid rgba(0,0,0,0.45);
+    text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(110,110,110,1.0)), to(rgba(100,100,100,1.0)));
+	-webkit-box-shadow: rgba(0,0,0,1.0) 0px 0px 2px,rgba(255,255,255,0.15) 0px 1px 1px inset;
+
+    /*
+	-webkit-border-radius: 2px;
+    margin: 0;
+    border: 0;
+	padding: 1px 2px;
+    background: rgba(0,0,0,0.75);
+    */
+}
+.reeder-content a:not([class*=reeder-img]):active {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(90,90,90,1.0)), to(rgba(110,110,110,1.0)));
+}
+
+.reeder-content img,
+.reeder-content embed,
+.reeder-content object,
+.reeder-content video,
+.reeder-content iframe {
+	-webkit-box-sizing: content-box;
+	-webkit-border-radius: 3px !important;
+	padding: 3px  !important;
+	background: #fff !important;
+	border: 1px solid rgba(0,0,0,0.25) !important;
+	-webkit-box-shadow: rgba(0,0,0,0.1) 0px 0px 2px !important; 
+	margin: 5px 5px 5px 0 !important;    
+}
+
+
+.reeder-content img,
+.reeder-content embed,
+.reeder-content object,
+.reeder-content video {
+	display: inline-block;
+	-webkit-border-radius: 3px !important;
+}
+
+.reeder-content img {
+ 	width: auto !important;
+	height: auto !important;   
+}
+
+
+
+.reeder-content blockquote {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+.reeder-content blockquote img,
+.reeder-content blockquote embed,
+.reeder-content blockquote object,
+.reeder-content blockquote video {
+    
+}
+
+.reeder-content img.reeder-borderless {
+    display: inline;
+    border: 0 !important;
+	-webkit-box-shadow: rgba(0,0,0,0) 0 0 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+}
+
+.reeder-content img[align=left], .reeder-content img[style*='float:left'],.reeder-content img[style*='float: left'] {
+	margin-right: 10px !important;
+	margin-left: 0 !important;
+}
+
+.reeder-content img[align=right], .reeder-content img[style*='float:right'],.reeder-content img[style*='float: right'] {
+	margin-left: 10px !important;
+	margin-right: 0 !important;
+}
+
+
+.reeder-content pre,
+.reeder-content code {
+    font-size: 0.9em;
+    max-width: 100%;
+    white-space-collapsing: collapse;
+    text-wrap: suppress;
+}
+
+.reeder-content hr {
+    position: relative;
+    border: 0;
+    height: 0;
+    margin: 20px 0;
+    width: auto !important;
+    border-top: 1px dashed rgba(0,0,0,0.15);
+    border-bottom: 1px dashed rgba(255,255,255,0.75);
+    
+}
+
+
+.reeder-content .reeder-readability-error {
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: rgba(0,0,0,0.4);
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.5);
+    -webkit-border-radius: 5px;
+}
+
+
+
+
+
+.reeder-sharers {
+    padding: 20px 0 0 0;
+    position: relative;
+    display: none;
+}
+.reeder-annotations .reeder-annotation {
+    padding: 20px 0 0 0;
+    line-height: 1.8;
+}
+.reeder-annotations {
+    display: none;
+}
+
+.reeder-sharers .reeder-shared-by-users,
+.reeder-annotations .reeder-annotation .reeder-annotation-user {
+    position: relative;
+    font-weight: normal;
+    color: rgb(60%%,60%%,60%%);
+    padding-right: 20px;
+}
+.reeder-annotations .reeder-annotation .reeder-annotation-user:before {
+    position: absolute;
+    right: 9px;
+    top: 4px;
+    opacity: 0.75;
+}
+.reeder-sharers:before {
+    position: absolute;
+    right: 7px;
+    top: 21px;
+    opacity: 0.75;
+}
+.reeder-sharers hr,
+.reeder-annotations hr {
+    position: relative;
+    border: 0;
+    height: 0;
+    margin: 20px 0 0 0;
+    border-top: 1px dashed rgba(0,0,0,0.10);
+    /*border-bottom: 1px dashed rgba(255,255,255,0.5);*/
+}
+.reeder-sharers hr {
+    margin-right: -20px;
+}
+

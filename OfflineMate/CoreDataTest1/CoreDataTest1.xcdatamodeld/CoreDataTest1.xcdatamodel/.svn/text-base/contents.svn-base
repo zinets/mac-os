@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1800" systemVersion="12B19" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CategoryItem" representedClassName="GRCategoryItem" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="subscriptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubscriptionItem" inverseName="categories" inverseEntity="SubscriptionItem" syncable="YES"/>
+    </entity>
+    <entity name="FeedItem" representedClassName="GRFeedItem" syncable="YES">
+        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="published" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="readed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="starred" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="subscription" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SubscriptionItem" inverseName="feeds" inverseEntity="SubscriptionItem" syncable="YES"/>
+    </entity>
+    <entity name="SubscriptionItem" representedClassName="GRSubscriptionItem" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unreaded" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CategoryItem" inverseName="subscriptions" inverseEntity="CategoryItem" syncable="YES"/>
+        <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FeedItem" inverseName="subscription" inverseEntity="FeedItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CategoryItem" positionX="-2466" positionY="-1188" width="128" height="90"/>
+        <element name="FeedItem" positionX="-2871" positionY="-1143" width="128" height="163"/>
+        <element name="SubscriptionItem" positionX="-2673" positionY="-1188" width="128" height="135"/>
+    </elements>
+</model>
